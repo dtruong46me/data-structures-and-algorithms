@@ -198,9 +198,9 @@ PostOrder(T):
  ```
  ```
 
- ## Sorting Algorithms
-  
-### Bubble Sort
+## Sorting Algorithms
+1. Bubble Sort 
+
 *Idea : For each iteration, this method will take the maximum element to the end of array A.*
 ```
 BubbleSort(A):
@@ -211,7 +211,8 @@ BubbleSort(A):
             // Đẩy phần tử lớn hơn xuống cuối cùng của mảng
 ```
 
-### Selection Sort
+2. Selection Sort
+
 *Idea : Select the minimum is the first, second minimum to the second,... of the array A*
 ```
 SelectionSort(A):
@@ -221,7 +222,8 @@ SelectionSort(A):
         swap(A[i], A[key])
 ```
 
-### Insertion Sort
+3. Insertion Sort
+
 *Idea : This method will divide the array A in to Sorted_Part and Unsorted_Part. For each iteration, InsertionSort will take 1 element from Unsorted_Part and sort with Sorted_Part.*
 ```
 InsertionSort(A):
@@ -234,7 +236,7 @@ InsertionSort(A):
         A[j+1] = key   // return the value of A[j+1]
 ```
 
-### Merge Sort
+4. Merge Sort
 ```
 MergeSort(A):
     if len(A) > 1:
@@ -253,7 +255,7 @@ MergeSort(A):
     return A
 ```
 
-### Quick Sort
+5. Quick Sort
 ```
 QuickSort(A):
     if N <= 1:
@@ -267,6 +269,10 @@ QuickSort(A):
     return QuickSort(L) + M + QuickSort(R)
 ```
 
-### Heap Sort
+6. Heap Sort
+```
+```
+
+7. TOPO Sort
 ```
 ```
