@@ -180,3 +180,93 @@ PostOrder(T):
         PostOrder(T(c))
     <visit r>
 ```
+
+## Detect cycle on Undirected Graph
+ *Method 1 : Using Depth First Search*
+ ```
+ DFS(u, parent):
+    visited[u] = 1
+    for (v in ADJ[u]) do:
+        if (visited[v] = 0) then:
+            if (DFS(v,u)) then:
+                return 1
+        else if (v is not parent) then:
+            return 1
+    return 0
+ ```
+ *Method 2 : Using DisjointSet Algorithm*
+ ```
+ ```
+
+ ## Sorting Algorithms
+  
+### Bubble Sort
+*Idea : For each iteration, this method will take the maximum element to the end of array A.*
+```
+BubbleSort(A):
+    for (i = 1,2,...N) do:
+        for (j = 1,2,...N-i) do:
+            if A[j] > A[j+1] then:
+                swap(A[j], A[j+1])
+            // Đẩy phần tử lớn hơn xuống cuối cùng của mảng
+```
+
+### Selection Sort
+*Idea : Select the minimum is the first, second minimum to the second,... of the array A*
+```
+SelectionSort(A):
+    for (i = 1,2,...N) do:
+        for (j = i,i+1,...N) do:
+            key := index of A such that A[key] is minium
+        swap(A[i], A[key])
+```
+
+### Insertion Sort
+*Idea : This method will divide the array A in to Sorted_Part and Unsorted_Part. For each iteration, InsertionSort will take 1 element from Unsorted_Part and sort with Sorted_Part.*
+```
+InsertionSort(A):
+    for (i = 1,2,3..N) do:
+        key := A[i] <the element from Unsorted_Part>
+        j = i-1
+        while (A[j] > key) and j >= 0:
+            A[j+1] = A[j]   // Overwrite to array A
+            j = j - 1
+        A[j+1] = key   // return the value of A[j+1]
+```
+
+### Merge Sort
+```
+MergeSort(A):
+    if len(A) > 1:
+        M = integer(N/2)
+        L = A[1,2,...M]
+        R = A[M+1,M+2,...N]
+
+        MergeSort(L)
+        MergeSort(R)
+
+        /// Merge element
+        while (i < |L|) and (j < |R|) do:
+            <Take element of both array into index of A>
+        
+        <if 1 array is DONE then put all the rest of elements in other array to A>
+    return A
+```
+
+### Quick Sort
+```
+QuickSort(A):
+    if N <= 1:
+        return A
+    
+    pivot = A[N/2]
+    L = [<elements in A less than pivot>]
+    R = [<elements in A greater than pivot>]
+    M = [<elements in A equal to pivot>]
+
+    return QuickSort(L) + M + QuickSort(R)
+```
+
+### Heap Sort
+```
+```
